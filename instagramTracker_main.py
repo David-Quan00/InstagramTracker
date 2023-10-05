@@ -25,7 +25,7 @@ for i in data['relationships_followers']:
     for j in i["string_list_data"]:
         lst_followers.append(j["value"])
 
-print("List of my Follwoers:")
+print("List of my Followers:")
 print(lst_followers)
 print()
 
@@ -57,12 +57,14 @@ print()
 # Create a master list containing my followers AND following
 both_lst = []
 both_lst = lst_followers + lst_following
-# print(both_lst)
+#print(both_lst)
 
 # Iterate through and print the accounts that I follow, but dont follow me.
-# Really this is either one of two cases:
-# (1) I follow and they don't follow me back OR (2) They follow me and I don't follow back (which I don't unfollow people)
-print("The individuals that either: Only I follow (they dont follow me back), or they follow me (and I dont follow back):")
+# Really there are three possible cases:
+# (1) I follow them and they don't follow me back OR
+# (2) They follow me and I don't follow back OR
+# (3) We mutually follow each other
+print("The individuals that only I follow (they dont follow me back):")
 # Compare:
 for element in both_lst:
     if element not in lst_followers and element in lst_following:

@@ -7,7 +7,7 @@ Unfortunately there is no feature on Instagram to see who has unfollowed you, on
 This script will parse the json files for my following and followers files (downloaded and obtained via instagram), compare the two lists, and output users that only appear in one of the lists.
 
 ---------------
-# Testing Code:
+# Testing the Code:
 
 I uploaded some test JSON files rather than my actual following and follower data.  Here we had:
 
